@@ -1,19 +1,23 @@
 {
-  "manifest_version": 3,
-  "name": "YouTube Bug Fixer",
+  "manifest_version": 2,
+  "name": "Firefox Fix Youtube Refresh",
   "version": "1.0",
-  "description": "Fixes a specific bug on YouTube.",
+  "description": "Refreshes the current YouTube video while preserving the timestamp.",
   "icons": {
     "48": "icons/icon.png"
   },
   "permissions": [
     "tabs",
-    "storage"
+    "storage",
+    "webNavigation",
+    "*://www.youtube.com/*"
   ],
-  "content_scripts": [
-    {
-      "matches": ["*://www.youtube.com/*"],
-      "js": ["content.js"]
-    }
-  ]
+  "browser_action": {
+    "default_icon": "icons/icon.png",
+    "default_title": "Firefox Fix Youtube Refresh"
+  },
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  }
 }
