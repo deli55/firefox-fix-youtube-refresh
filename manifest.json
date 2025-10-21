@@ -1,6 +1,6 @@
 {
   "manifest_version": 2,
-  "name": "Firefox Fix Youtube Refresh",
+  "name": "Fix Youtube Refresh",
   "version": "1.0",
   "description": "Refreshes the current YouTube video while preserving the timestamp.",
   "icons": {
@@ -14,7 +14,7 @@
   ],
   "browser_action": {
     "default_icon": "icons/icon.png",
-    "default_title": "Firefox Fix Youtube Refresh"
+    "default_title": "Fix Youtube Refresh"
   },
   "background": {
     "scripts": ["background.js"],

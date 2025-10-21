@@ -1,4 +1,4 @@
-console.log("Firefox Fix Youtube Refresh loaded.");
+console.log("Fix Youtube Refresh loaded.");
 
 // Helper: format seconds into YouTube's t= format
 function formatTime(seconds) {
@@ -9,10 +9,10 @@ function formatTime(seconds) {
 
 // Toolbar button click
 browser.browserAction.onClicked.addListener(tab => {
-    console.log("Firefox Fix Youtube Refresh: Button clicked on tab:", tab.url);
+    console.log("Fix Youtube Refresh: Button clicked on tab:", tab.url);
 
     if (!tab.url.includes("youtube.com/watch")) {
-        console.log("Firefox Fix Youtube Refresh: Not a YouTube video page");
+        console.log("Fix Youtube Refresh: Not a YouTube video page");
         return;
     }
 
@@ -28,7 +28,7 @@ browser.browserAction.onClicked.addListener(tab => {
     }).then(results => {
         const time = results[0] || 0;
         const t = formatTime(time);
-        console.log("Firefox Fix Youtube Refresh: Video time formatted:", t);
+        console.log("Fix Youtube Refresh: Video time formatted:", t);
 
         // Reload with updated URL
         const url = new URL(tab.url);
@@ -36,5 +36,5 @@ browser.browserAction.onClicked.addListener(tab => {
 
         // Reload the tab
         browser.tabs.update(tab.id, { url: url.toString() });
-    }).catch(err => console.error("Firefox Fix Youtube Refresh: Error getting video time:", err));
+    }).catch(err => console.error("Fix Youtube Refresh: Error getting video time:", err));
 });
