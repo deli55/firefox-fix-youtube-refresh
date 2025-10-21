@@ -1,4 +1,4 @@
-This firefox addon attempts to fix the refresh issue on youtube if your video is paused for a long time or you change audio device.
+This firefox addon attempts to fix the refresh issue on youtube if your video is paused for a long time or you change the audio device.
 
 By default the button might be in your extention submenu in the toolbar, you can drag it or any other addon out in the open so you can click it easily.
 
